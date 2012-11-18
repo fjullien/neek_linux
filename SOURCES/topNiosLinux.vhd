@@ -89,7 +89,12 @@ port (	CLOCK_50            : in std_logic;
 	UART_TXD            : out std_logic;
 
 	-- LEDS --
-	LED_DEBUG           : buffer std_logic_vector(3 downto 0)
+	LED_DEBUG           : buffer std_logic_vector(3 downto 0);
+
+	MISO                : in std_logic;
+	MOSI                : out std_logic;
+	SCLK                : out std_logic;
+	SSn                 : out std_logic
 );
 
 end topNiosLinux;
@@ -148,7 +153,11 @@ port (	LOCAL_REFRESH_ACK_FROM_THE_DDR_SDRAM : out   std_logic;                  
 	CLOCK_CLK                            : in    std_logic                     := 'X';             -- clk
 	DDR_SDRAM_GLOBAL_RESET_N_RESET_N     : in    std_logic                     := 'X';             -- reset_n
 	DDR_SDRAM_SOFT_RESET_N_RESET_N       : in    std_logic                     := 'X';             -- reset_n
-	DDR_SDRAM_SYSCLK_CLK                 : out   std_logic                                         -- clk
+	DDR_SDRAM_SYSCLK_CLK                 : out   std_logic;                                         -- clk
+	SPI_MISO                             : in    std_logic                     := 'X';             -- MISO
+	SPI_MOSI                             : out   std_logic;                                        -- MOSI
+	SPI_SCLK                             : out   std_logic;                                        -- SCLK
+	SPI_SS_N                             : out   std_logic                                        -- SS_n
 );
 
 end component;
@@ -244,7 +253,13 @@ port map (	LOCAL_REFRESH_ACK_FROM_THE_DDR_SDRAM => open,
 		CLOCK_CLK                            => CLOCK_50,
 		DDR_SDRAM_GLOBAL_RESET_N_RESET_N     => KEY_CPU_RESET,
 		DDR_SDRAM_SOFT_RESET_N_RESET_N       => KEY_CPU_RESET,
-		DDR_SDRAM_SYSCLK_CLK			=> clock_100MHz);
+
+		DDR_SDRAM_SYSCLK_CLK                 => clock_100MHz,
+
+		SPI_MISO                             => MISO,
+		SPI_MOSI                             => MOSI,
+		SPI_SCLK                             => SCLK,
+		SPI_SS_N                             => SSn);
 
 -----------------------------------------------------------
 --                       Processes                       --
