@@ -7,7 +7,7 @@
    description=""
    tags=""
    categories="System" />
- <parameter name="bonusData"><![CDATA[bonusData 
+ <parameter name="bonusData"><![CDATA[bonusData
 {
    element $${FILENAME}
    {
@@ -405,13 +405,13 @@
    type="clock"
    dir="start" />
  <interface name="spi" internal="SPI.external" type="conduit" dir="end" />
- <module kind="clock_source" version="11.1" enabled="1" name="CLK">
+ <module kind="clock_source" version="12.0" enabled="1" name="CLK">
   <parameter name="clockFrequency" value="100000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="100000000" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
- <module kind="altera_nios2_qsys" version="11.1" enabled="1" name="LINUX_CPU">
+ <module kind="altera_nios2_qsys" version="12.0" enabled="1" name="LINUX_CPU">
   <parameter name="setting_showUnpublishedSettings" value="false" />
   <parameter name="setting_showInternalSettings" value="false" />
   <parameter name="setting_preciseSlaveAccessErrorException" value="false" />
@@ -517,7 +517,7 @@
  </module>
  <module
    kind="altera_avalon_onchip_memory2"
-   version="11.1"
+   version="12.0"
    enabled="1"
    name="TLB">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
@@ -540,7 +540,7 @@
   <parameter name="useShallowMemBlocks" value="false" />
   <parameter name="writable" value="true" />
  </module>
- <module kind="altera_avalon_uart" version="11.1" enabled="1" name="UART">
+ <module kind="altera_avalon_uart" version="12.0" enabled="1" name="UART">
   <parameter name="baud" value="115200" />
   <parameter name="clockRate" value="100000000" />
   <parameter name="dataBits" value="8" />
@@ -558,7 +558,7 @@
  </module>
  <module
    kind="altera_avalon_jtag_uart"
-   version="11.1"
+   version="12.0"
    enabled="1"
    name="JTAG_UART">
   <parameter name="allowMultipleConnections" value="false" />
@@ -573,7 +573,7 @@
   <parameter name="writeBufferDepth" value="64" />
   <parameter name="writeIRQThreshold" value="8" />
  </module>
- <module kind="altera_avalon_pio" version="11.1" enabled="1" name="LED_STATUS">
+ <module kind="altera_avalon_pio" version="12.0" enabled="1" name="LED_STATUS">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -589,7 +589,7 @@
  </module>
  <module
    kind="altera_avalon_timer"
-   version="11.1"
+   version="12.0"
    enabled="1"
    name="SYS_CLK_TIMER">
   <parameter name="alwaysRun" value="false" />
@@ -603,7 +603,7 @@
   <parameter name="timeoutPulseOutput" value="false" />
   <parameter name="timerPreset" value="FULL_FEATURED" />
  </module>
- <module kind="altmemddr" version="11.1" enabled="1" name="DDR_SDRAM">
+ <module kind="altmemddr" version="12.0" enabled="1" name="DDR_SDRAM">
   <parameter name="pipeline_commands" value="false" />
   <parameter name="debug_en" value="false" />
   <parameter name="export_debug_port" value="false" />
@@ -796,7 +796,7 @@
   <parameter name="t_DH_calculated" value="0,400" />
   <parameter name="t_DS" value="0.4" />
  </module>
- <module kind="triple_speed_ethernet" version="11.1" enabled="1" name="TSE">
+ <module kind="triple_speed_ethernet" version="12.0" enabled="1" name="TSE">
   <parameter name="atlanticSinkClockRate" value="0" />
   <parameter name="atlanticSinkClockSource" value="unassigned" />
   <parameter name="atlanticSourceClockRate" value="0" />
@@ -864,7 +864,7 @@
   <parameter name="usePCS" value="false" />
   <parameter name="use_sync_reset" value="true" />
  </module>
- <module kind="altera_avalon_sgdma" version="11.1" enabled="1" name="SGDMA_TX">
+ <module kind="altera_avalon_sgdma" version="12.0" enabled="1" name="SGDMA_TX">
   <parameter name="addressWidth" value="32" />
   <parameter name="alwaysDoMaxBurst" value="true" />
   <parameter name="avalonMMByteReorderMode" value="0" />
@@ -881,7 +881,7 @@
   <parameter name="transferMode" value="MEMORY_TO_STREAM" />
   <parameter name="writeBurstcountWidth" value="4" />
  </module>
- <module kind="altera_avalon_sgdma" version="11.1" enabled="1" name="SGDMA_RX">
+ <module kind="altera_avalon_sgdma" version="12.0" enabled="1" name="SGDMA_RX">
   <parameter name="addressWidth" value="32" />
   <parameter name="alwaysDoMaxBurst" value="true" />
   <parameter name="avalonMMByteReorderMode" value="0" />
@@ -900,7 +900,7 @@
  </module>
  <module
    kind="altera_tristate_conduit_bridge"
-   version="11.1"
+   version="12.0"
    enabled="1"
    name="TRI_STATE_BRIDGE">
   <parameter name="INTERFACE_INFO"><![CDATA[<info><slave name="tcs"><master name="TRI_STATE_PIN_SHARER.tcm"><pin role="" width="1" type="Invalid" output_name="" output_enable_name="" input_name="" /><pin role="select_n_to_the_CFI" width="1" type="Output" output_name="select_n_to_the_CFI" output_enable_name="" input_name="" /><pin role="read_n_to_the_CFI" width="1" type="Output" output_name="read_n_to_the_CFI" output_enable_name="" input_name="" /><pin role="data_to_and_from_the_CFI" width="16" type="Bidirectional" output_name="data_to_and_from_the_CFI" output_enable_name="data_to_and_from_the_CFI_outen" input_name="data_to_and_from_the_CFI_in" /><pin role="write_n_to_the_CFI" width="1" type="Output" output_name="write_n_to_the_CFI" output_enable_name="" input_name="" /><pin role="address_to_the_CFI" width="24" type="Output" output_name="address_to_the_CFI" output_enable_name="" input_name="" /></master></slave></info>]]></parameter>
@@ -909,7 +909,7 @@
  </module>
  <module
    kind="altera_tristate_conduit_pin_sharer"
-   version="11.1"
+   version="12.0"
    enabled="1"
    name="TRI_STATE_PIN_SHARER">
   <parameter name="INTERFACE_INFO"><![CDATA[<info><slave name="tcs0"><master name="CFI.tcm"><pin role="" width="1" type="Invalid" output_name="" output_enable_name="" input_name="" /><pin role="address" width="24" type="Output" output_name="tcm_address_out" output_enable_name="" input_name="" /><pin role="write_n" width="1" type="Output" output_name="tcm_write_n_out" output_enable_name="" input_name="" /><pin role="data" width="16" type="Bidirectional" output_name="tcm_data_out" output_enable_name="tcm_data_outen" input_name="tcm_data_in" /><pin role="read_n" width="1" type="Output" output_name="tcm_read_n_out" output_enable_name="" input_name="" /><pin role="chipselect_n" width="1" type="Output" output_name="tcm_chipselect_n_out" output_enable_name="" input_name="" /></master></slave></info>]]></parameter>
@@ -925,7 +925,7 @@
  </module>
  <module
    kind="altera_generic_tristate_controller"
-   version="11.1"
+   version="12.0"
    enabled="1"
    name="CFI">
   <parameter name="TCM_ADDRESS_W" value="24" />
@@ -979,7 +979,7 @@
   <parameter name="AUTO_TRISTATECONDUIT_MASTERS" value="" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
  </module>
- <module kind="altera_avalon_spi" version="11.1" enabled="1" name="SPI">
+ <module kind="altera_avalon_spi" version="12.0" enabled="1" name="SPI">
   <parameter name="clockPhase" value="0" />
   <parameter name="clockPolarity" value="0" />
   <parameter name="dataWidth" value="8" />
@@ -996,7 +996,7 @@
  </module>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.instruction_master"
    end="LINUX_CPU.jtag_debug_module">
   <parameter name="arbitrationPriority" value="1" />
@@ -1004,7 +1004,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.data_master"
    end="LINUX_CPU.jtag_debug_module">
   <parameter name="arbitrationPriority" value="1" />
@@ -1012,7 +1012,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.tightly_coupled_instruction_master_0"
    end="TLB.s2">
   <parameter name="arbitrationPriority" value="1" />
@@ -1020,7 +1020,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.data_master"
    end="UART.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1028,7 +1028,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.data_master"
    end="JTAG_UART.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -1036,7 +1036,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.data_master"
    end="LED_STATUS.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1044,7 +1044,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.data_master"
    end="SYS_CLK_TIMER.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1052,7 +1052,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.instruction_master"
    end="DDR_SDRAM.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1060,44 +1060,44 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.data_master"
    end="DDR_SDRAM.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
  </connection>
- <connection kind="clock" version="11.1" start="CLK.clk" end="TLB.clk1" />
- <connection kind="clock" version="11.1" start="CLK.clk" end="TLB.clk2" />
- <connection kind="clock" version="11.1" start="CLK.clk" end="UART.clk" />
- <connection kind="clock" version="11.1" start="CLK.clk" end="JTAG_UART.clk" />
- <connection kind="clock" version="11.1" start="CLK.clk" end="LED_STATUS.clk" />
- <connection kind="clock" version="11.1" start="CLK.clk" end="SYS_CLK_TIMER.clk" />
+ <connection kind="clock" version="12.0" start="CLK.clk" end="TLB.clk1" />
+ <connection kind="clock" version="12.0" start="CLK.clk" end="TLB.clk2" />
+ <connection kind="clock" version="12.0" start="CLK.clk" end="UART.clk" />
+ <connection kind="clock" version="12.0" start="CLK.clk" end="JTAG_UART.clk" />
+ <connection kind="clock" version="12.0" start="CLK.clk" end="LED_STATUS.clk" />
+ <connection kind="clock" version="12.0" start="CLK.clk" end="SYS_CLK_TIMER.clk" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="CLK.clk_reset"
    end="LINUX_CPU.reset_n" />
- <connection kind="reset" version="11.1" start="CLK.clk_reset" end="TLB.reset1" />
- <connection kind="reset" version="11.1" start="CLK.clk_reset" end="TLB.reset2" />
- <connection kind="reset" version="11.1" start="CLK.clk_reset" end="UART.reset" />
+ <connection kind="reset" version="12.0" start="CLK.clk_reset" end="TLB.reset1" />
+ <connection kind="reset" version="12.0" start="CLK.clk_reset" end="TLB.reset2" />
+ <connection kind="reset" version="12.0" start="CLK.clk_reset" end="UART.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="CLK.clk_reset"
    end="JTAG_UART.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="CLK.clk_reset"
    end="LED_STATUS.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="CLK.clk_reset"
    end="SYS_CLK_TIMER.reset" />
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.data_master"
    end="TSE.control_port">
   <parameter name="arbitrationPriority" value="1" />
@@ -1105,28 +1105,28 @@
  </connection>
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="CLK.clk_reset"
    end="TSE.reset_connection" />
  <connection
    kind="clock"
-   version="11.1"
+   version="12.0"
    start="CLK.clk"
    end="TSE.transmit_clock_connection" />
  <connection
    kind="clock"
-   version="11.1"
+   version="12.0"
    start="CLK.clk"
    end="TSE.control_port_clock_connection" />
- <connection kind="clock" version="11.1" start="CLK.clk" end="SGDMA_TX.clk" />
+ <connection kind="clock" version="12.0" start="CLK.clk" end="SGDMA_TX.clk" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="CLK.clk_reset"
    end="SGDMA_TX.reset" />
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.data_master"
    end="SGDMA_TX.csr">
   <parameter name="arbitrationPriority" value="1" />
@@ -1134,12 +1134,12 @@
  </connection>
  <connection
    kind="avalon_streaming"
-   version="11.1"
+   version="12.0"
    start="SGDMA_TX.out"
    end="TSE.transmit" />
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="SGDMA_TX.m_read"
    end="DDR_SDRAM.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1147,7 +1147,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="SGDMA_TX.descriptor_write"
    end="DDR_SDRAM.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1155,21 +1155,21 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="SGDMA_TX.descriptor_read"
    end="DDR_SDRAM.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
  </connection>
- <connection kind="clock" version="11.1" start="CLK.clk" end="SGDMA_RX.clk" />
+ <connection kind="clock" version="12.0" start="CLK.clk" end="SGDMA_RX.clk" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="CLK.clk_reset"
    end="SGDMA_RX.reset" />
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.data_master"
    end="SGDMA_RX.csr">
   <parameter name="arbitrationPriority" value="1" />
@@ -1177,12 +1177,12 @@
  </connection>
  <connection
    kind="avalon_streaming"
-   version="11.1"
+   version="12.0"
    start="TSE.receive"
    end="SGDMA_RX.in" />
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="SGDMA_RX.descriptor_read"
    end="DDR_SDRAM.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1190,7 +1190,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="SGDMA_RX.descriptor_write"
    end="DDR_SDRAM.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1198,7 +1198,7 @@
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="SGDMA_RX.m_write"
    end="DDR_SDRAM.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1206,18 +1206,18 @@
  </connection>
  <connection
    kind="clock"
-   version="11.1"
+   version="12.0"
    start="CLK.clk"
    end="TRI_STATE_PIN_SHARER.clk" />
  <connection
    kind="tristate_conduit"
-   version="11.1"
+   version="12.0"
    start="TRI_STATE_PIN_SHARER.tcm"
    end="TRI_STATE_BRIDGE.tcs" />
- <connection kind="clock" version="11.1" start="CLK.clk" end="CFI.clk" />
+ <connection kind="clock" version="12.0" start="CLK.clk" end="CFI.clk" />
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.data_master"
    end="CFI.uas">
   <parameter name="arbitrationPriority" value="1" />
@@ -1225,199 +1225,199 @@
  </connection>
  <connection
    kind="tristate_conduit"
-   version="11.1"
+   version="12.0"
    start="CFI.tcm"
    end="TRI_STATE_PIN_SHARER.tcs0" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="LINUX_CPU.reset_n" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="LINUX_CPU.reset_n" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="TLB.reset1" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="TLB.reset1" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="TLB.reset2" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="TLB.reset2" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="UART.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="UART.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="JTAG_UART.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="JTAG_UART.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="LED_STATUS.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="LED_STATUS.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="SYS_CLK_TIMER.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="SYS_CLK_TIMER.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="TSE.reset_connection" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="TSE.reset_connection" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="SGDMA_TX.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="SGDMA_TX.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="SGDMA_RX.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="SGDMA_RX.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="CLK.clk_reset"
    end="TRI_STATE_BRIDGE.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="TRI_STATE_BRIDGE.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="TRI_STATE_BRIDGE.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="CLK.clk_reset"
    end="TRI_STATE_PIN_SHARER.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="TRI_STATE_PIN_SHARER.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="TRI_STATE_PIN_SHARER.reset" />
- <connection kind="reset" version="11.1" start="CLK.clk_reset" end="CFI.reset" />
+ <connection kind="reset" version="12.0" start="CLK.clk_reset" end="CFI.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.jtag_debug_module_reset"
    end="CFI.reset" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="CFI.reset" />
  <connection
    kind="clock"
-   version="11.1"
+   version="12.0"
    start="CLK.clk"
    end="TRI_STATE_BRIDGE.clk" />
  <connection
    kind="reset"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.reset_request_n"
    end="CLK.clk_in_reset" />
- <connection kind="clock" version="11.1" start="CLK.clk" end="LINUX_CPU.clk" />
+ <connection kind="clock" version="12.0" start="CLK.clk" end="LINUX_CPU.clk" />
  <connection
    kind="interrupt"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.d_irq"
    end="UART.irq">
   <parameter name="irqNumber" value="0" />
  </connection>
  <connection
    kind="interrupt"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.d_irq"
    end="JTAG_UART.irq">
   <parameter name="irqNumber" value="1" />
  </connection>
  <connection
    kind="interrupt"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.d_irq"
    end="SYS_CLK_TIMER.irq">
   <parameter name="irqNumber" value="2" />
  </connection>
  <connection
    kind="interrupt"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.d_irq"
    end="SGDMA_RX.csr_irq">
   <parameter name="irqNumber" value="3" />
  </connection>
  <connection
    kind="interrupt"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.d_irq"
    end="SGDMA_TX.csr_irq">
   <parameter name="irqNumber" value="4" />
  </connection>
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.tightly_coupled_data_master_0"
    end="TLB.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -1425,25 +1425,25 @@
  </connection>
  <connection
    kind="clock"
-   version="11.1"
+   version="12.0"
    start="CLK.clk"
    end="TSE.receive_clock_connection" />
  <connection
    kind="clock"
-   version="11.1"
+   version="12.0"
    start="DDR_SDRAM.auxfull"
    end="CLK.clk_in" />
- <connection kind="clock" version="11.1" start="CLK.clk" end="SPI.clk" />
- <connection kind="reset" version="11.1" start="CLK.clk_reset" end="SPI.reset" />
+ <connection kind="clock" version="12.0" start="CLK.clk" end="SPI.clk" />
+ <connection kind="reset" version="12.0" start="CLK.clk_reset" end="SPI.reset" />
  <connection
    kind="avalon"
-   version="11.1"
+   version="12.0"
    start="LINUX_CPU.data_master"
    end="SPI.spi_control_port">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x02001800" />
  </connection>
- <connection kind="interrupt" version="11.1" start="LINUX_CPU.d_irq" end="SPI.irq">
+ <connection kind="interrupt" version="12.0" start="LINUX_CPU.d_irq" end="SPI.irq">
   <parameter name="irqNumber" value="5" />
  </connection>
 </system>
