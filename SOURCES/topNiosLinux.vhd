@@ -56,7 +56,7 @@ port (	CLOCK_50            : in std_logic;
 	DDRTOP_WE_N         : out std_logic;
 
 	-- FLASH SSRAM --
-	FLASHSSRAM_ADDR     : out std_logic_vector (23 downto 0);
+	FLASHSSRAM_ADDR     : out std_logic_vector (23 downto 1);
 	FLASHSSRAM_DQ       : inout std_logic_vector (31 downto 0);
 	FLASH_CS_N          : out std_logic;
 	FLASH_OE_N          : out std_logic;
@@ -186,6 +186,8 @@ signal MDIO_IN      : std_logic;
 signal MDIO_OEN     : std_logic;
 signal MDIO_OUT     : std_logic;
 
+signal flash_addr   : std_logic_vector(23 downto 0);
+
 signal clock_100MHz : std_logic;
 
 begin
@@ -193,6 +195,8 @@ begin
 -----------------------------------------------------------
 --                 Combinatorial logic                   --
 -----------------------------------------------------------
+
+FLASHSSRAM_ADDR         <= flash_addr(23 downto 1);
 
 FLASHSSRAM_RST_N        <= KEY_CPU_RESET;
 LED_DEBUG(3 downto 2)   <= pio_leds(1) & pio_leds(0);
@@ -247,7 +251,7 @@ port map (	LOCAL_REFRESH_ACK_FROM_THE_DDR_SDRAM => open,
 
 		WRITE_N_TO_THE_CFI                   => FLASH_WR_N,
 		READ_N_TO_THE_CFI                    => FLASH_OE_N,
-		ADDRESS_TO_THE_CFI                   => FLASHSSRAM_ADDR,
+		ADDRESS_TO_THE_CFI                   => flash_addr,
 		DATA_TO_AND_FROM_THE_CFI             => FLASHSSRAM_DQ(15 downto 0),
 		SELECT_N_TO_THE_CFI                  => FLASH_CS_N,
 		CLOCK_CLK                            => CLOCK_50,
