@@ -286,4 +286,5 @@ set_global_assignment -name SEARCH_PATH soft/altera/91/ip/altera/sopc_builder_ip
 set_global_assignment -name SEARCH_PATH "triple_speed_ethernet-library/" -tag from_archive
 set_global_assignment -name VHDL_FILE ../SOURCES/topNiosLinux.vhd
 set_global_assignment -name QIP_FILE linux_cpu_soc/synthesis/linux_cpu_soc.qip
+set_global_assignment -name SDC_FILE NiosLinux.sdc
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
