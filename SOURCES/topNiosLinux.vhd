@@ -145,11 +145,11 @@ port (	LOCAL_REFRESH_ACK_FROM_THE_DDR_SDRAM : out   std_logic;                  
 	MDIO_OEN_FROM_THE_TSE                : out   std_logic;                                        -- mdio_oen
 	MDIO_IN_TO_THE_TSE                   : in    std_logic                     := 'X';             -- mdio_in
 	MDC_FROM_THE_TSE                     : out   std_logic;                                        -- mdc
-	WRITE_N_TO_THE_CFI                   : out   std_logic;                     -- write_n_to_the_CFI
-	READ_N_TO_THE_CFI                    : out   std_logic;                     -- read_n_to_the_CFI
-	ADDRESS_TO_THE_CFI                   : out   std_logic_vector(23 downto 0);                    -- address_to_the_CFI
-	DATA_TO_AND_FROM_THE_CFI             : inout std_logic_vector(15 downto 0) := (others => 'X'); -- data_to_and_from_the_CFI
-	SELECT_N_TO_THE_CFI                  : out   std_logic;                     -- select_n_to_the_CFI
+	cfi_tcm_address_out                  : out   std_logic_vector(23 downto 0);                    -- tcm_address_out
+	cfi_tcm_read_n_out                   : out   std_logic;                     -- tcm_read_n_out
+	cfi_tcm_write_n_out                  : out   std_logic;                     -- tcm_write_n_out
+	cfi_tcm_data_out                     : inout std_logic_vector(15 downto 0) := (others => 'X'); -- tcm_data_out
+	cfi_tcm_chipselect_n_out             : out   std_logic;                     -- tcm_chipselect_n_out
 	CLOCK_CLK                            : in    std_logic                     := 'X';             -- clk
 	DDR_SDRAM_GLOBAL_RESET_N_RESET_N     : in    std_logic                     := 'X';             -- reset_n
 	DDR_SDRAM_SOFT_RESET_N_RESET_N       : in    std_logic                     := 'X';             -- reset_n
@@ -249,11 +249,12 @@ port map (	LOCAL_REFRESH_ACK_FROM_THE_DDR_SDRAM => open,
 		MDIO_IN_TO_THE_TSE                   => MDIO_IN,
 		MDC_FROM_THE_TSE                     => HC_MDC,
 
-		WRITE_N_TO_THE_CFI                   => FLASH_WR_N,
-		READ_N_TO_THE_CFI                    => FLASH_OE_N,
-		ADDRESS_TO_THE_CFI                   => flash_addr,
-		DATA_TO_AND_FROM_THE_CFI             => FLASHSSRAM_DQ(15 downto 0),
-		SELECT_N_TO_THE_CFI                  => FLASH_CS_N,
+		CFI_TCM_ADDRESS_OUT                  => flash_addr,
+		CFI_TCM_READ_N_OUT                   => FLASH_OE_N,
+		CFI_TCM_WRITE_N_OUT                  => FLASH_WR_N,
+		CFI_TCM_DATA_OUT                     => FLASHSSRAM_DQ(15 downto 0),
+		CFI_TCM_CHIPSELECT_N_OUT             => FLASH_CS_N,
+
 		CLOCK_CLK                            => CLOCK_50,
 		DDR_SDRAM_GLOBAL_RESET_N_RESET_N     => KEY_CPU_RESET,
 		DDR_SDRAM_SOFT_RESET_N_RESET_N       => KEY_CPU_RESET,
